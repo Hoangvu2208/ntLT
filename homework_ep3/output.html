@@ -7,8 +7,47 @@
     <title>out put</title>
 </head>
 <body>
+    <style>
+        button {
+            margin :2rem;
+        }
+    </style>
 
-     <!-- bai tap 1  -->
+     <!-- bai tap 1  (alert xin chao ra man hinh) -->
+
+     <button type="button" onclick="showMessage()">Click me </button>
+     <script>
+        function showMessage() {
+            alert("hello world");
+        }
+     </script>
+
+     <!-- bai tap 2  -->
+     <div id="msgDiv"></div>
+     <button type="button" onclick="showMessage2()">Click me 2 </button>
+     <script>
+        function showMessage2() {
+            document.getElementById("msgDiv").innerHTML = "hello";
+        }
+     </script>
+
+     <!-- bai tap 3  -->
+
+     <button type="button" onclick="showMessage3()">Click me 3 </button>
+     <script>
+        function showMessage3() {
+            document.write("hello");
+        }
+     </script>
+
+     <!-- bai tap 4  -->
+     <button type="button" onclick="showMessage4()">Click me 4 </button>
+     <script>
+        function showMessage4() {
+           console.log("xin xhao");
+        }
+     </script>
+
 
 
     
