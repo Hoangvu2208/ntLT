@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruit</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="name" />
+      <button type="button" onclick="getPrice()">check</button>
+    </form>
+    <div id="price" style="margin-top: 20px"></div>
+
+    <script>
+      function getPrice() {
+        let div_price = document.getElementById("price");
+        let price = 0;
+        let fruit = document.getElementById("name").value;
+        switch (fruit) {
+          case "Oi":
+            price = 20000 + "vnd/kg";
+            break;
+          case "Dua Hau":
+            price = 20000 + "vnd/kg";
+            break;
+          case "Tao":
+            price = 30000 + "vnd/kg";
+            break;
+          case "Xoai":
+            price = 30000 + "vnd/kg";
+            break;
+          case "Cam":
+            price = 40000 + "vnd/kg";
+            break;
+          case "Chom Chom":
+            price = 40000 + "vnd/kg";
+            break;
+          case "Mang Cut":
+            price = 50000 + "vnd/kg";
+            break;
+        }
+        div_price.innerHTML = price;
+      }
+    </script>
+  </body>
+</html>
