@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Average</title>
+  </head>
+  <body>
+    <style>
+      label,
+      select {
+        margin: 10px;
+      }
+      input,
+      option {
+        margin: 5px;
+      }
+    </style>
+    <form action="">
+      <label for="">Diem toan</label>
+      <input type="number" name="toan" id="toan" /> <br />
+      <label for="">Diem van</label>
+      <input type="number" name="van" id="van" /> <br />
+      <label for="">Diem anh</label>
+      <input type="number" name="anh" id="anh" /> <br />
+      <label for="">Khu vuc</label>
+
+      <select name="kv" id="kv">
+        <option value="kv1">KV1</option>
+        <option value="kv2">KV2</option>
+        <option value="kv2-nt">KV2-NT</option>
+        <option value="kv3">KV3</option>
+      </select>
+      <br />
+      <button type="button" onclick="average()">Tinh diem</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+      console.log(area);
+
+      function average() {
+        let toan = document.getElementById("toan").value;
+        let van = document.getElementById("van").value;
+        let anh = document.getElementById("anh").value;
+        let kv = document.getElementById("kv").value;
+        // console.log(area);
+        let area = 0;
+        switch (kv) {
+          case "kv1":
+            area = 0.75;
+            break;
+          case "kv2-nt":
+            area = 0.5;
+            break;
+          case "kv2":
+            area = 0.25;
+            break;
+          case "kv3":
+            area = 0;
+            break;
+        }
+        let result =
+          parseFloat(toan) +
+          parseFloat(van) +
+          parseFloat(anh) +
+          parseFloat(area);
+        console.log(result);
+        let inner = document.getElementById("result");
+        inner.innerHTML = "Tong diem khoi D cua ban la " + result;
+      }
+    </script>
+  </body>
+</html>
