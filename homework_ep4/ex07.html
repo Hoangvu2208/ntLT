@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="">Nhap thang muon kiem tra</label> <br>
+        <input type="number" id="month">
+        <button type="button" onclick="soNgay()"> ketqua</button>
+        <div id="result"></div>
+    </form>
+
+    <script>
+        function soNgay (){
+            let month = document.getElementById('month').value;
+            console.log(month);
+            let result = '';
+            switch(month){
+                case '1': 
+                case '3':
+                case '7':
+                case '8':
+                case '10': 
+                case '12':
+                    result = '31 ngay';
+                    break;
+                case '2':
+                result = '28 hoac 29 ngay';
+                    break;     
+                case '4':
+                case '6':
+                case '9':
+                case '11':
+                result = '3 ngay';
+                    break;
+                default:
+                    result = 'vui long nhap so tu 1 den 12';
+            }
+            let inner = document.getElementById('result');
+                    inner.innerHTML= result;
+
+
+        }
+    </script>
+    
+</body>
+</html>
