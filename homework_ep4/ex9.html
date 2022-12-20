@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyen doi nam duong lich</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">Nhap nam duong lich </label>
+      <input type="number" id="year" />
+      <button type="button" onclick="change()">Xem</button>
+    </form>
+    <div id="result">
+        
+    </div>
+    <script>
+      function change() {
+        let year = parseFloat(document.getElementById("year").value);
+        console.log(year);
+        let nam_can = nam_chi = "";
+        let can = year % 10;
+        console.log(can);
+        switch (can) {
+          case 0:
+            nam_can = "canh";
+            break;
+          case 1:
+            nam_can = "tan";
+            break;
+          case 2:
+            nam_can = "nham";
+            break;
+          case 3:
+            nam_can = "quy";
+            break;
+          case 4:
+            nam_can = "giap";
+            break;
+          case 5:
+            nam_can = "at";
+            break;
+          case 6:
+            nam_can = "binh";
+            break;
+          case 7:
+            nam_can = "dinh";
+            break;
+          case 8:
+            nam_can = "mau";
+            break;
+          case 9:
+            nam_can = "ky";
+            break;
+        }
+        console.log(nam_can);
+
+        let chi = year % 12;
+
+        switch (chi) {
+          case 0:
+            nam_chi = "than";
+            break;
+          case 1:
+            nam_chi = "dau";
+            break;
+          case 2:
+            nam_chi = "tuat";
+            break;
+          case 3:
+            nam_chi = "hoi";
+            break;
+          case 4:
+            nam_chi = "ty";
+            break;
+          case 5:
+            nam_chi = "suu";
+            break;
+          case 6:
+            nam_chi = "dan";
+            break;
+          case 7:
+            nam_chi = "mao";
+            break;
+          case 8:
+            nam_chi = "thin";
+            break;
+          case 9:
+            nam_chi = "ty";
+            break;
+          case 10:
+            nam_chi = "ngo";
+            break;
+          case 11:
+            nam_chi = "mui";
+            break;
+        }
+        console.log(nam_chi);
+        
+
+        let result = nam_can + ' ' + nam_chi;
+        //console.log(result);
+         document.getElementById('result').innerHTML = "nam am lich la nam :" + result;
+
+      }
+    </script>
+  </body>
+</html>
