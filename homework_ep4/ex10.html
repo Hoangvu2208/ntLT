@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .form-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+    </style>
+    <form action="">
+        <div class="form-container">
+            <div class="form-col">
+                <label for="">Amount</label> <br>
+                <input type="text" id="amount">
+
+            </div>
+            <div class="form-col">
+                <label for="">From Currentcy</label> <br>
+               <select name="" id="from">
+                <option value="VND">VND</option>
+               </select>
+
+            </div>
+            <div class="form-col">
+                <label for="">To Currentcy</label> <br>
+                <select name="" id="to">
+                 <option value="USD">USD</option>
+                </select>
+
+            </div>
+            <div class="form-col">
+                <br>
+                <button type="button" onclick="change()">Change</button>
+
+            </div>
+        </div>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function change (){
+            let rate = 23000;
+            let amount = document.getElementById('amount').value;
+
+            result = amount /rate;
+             let inner = document.getElementById('result');
+             inner.innerHTML = result
+
+        }
+    </script>
+    
+</body>
+</html>
