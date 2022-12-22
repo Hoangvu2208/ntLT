@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI cal</title>
+  </head>
+  <body>
     <div id="result"></div>
     <script>
-        let weight = prompt('nhap can nang :');
-        let height = prompt('nhap chieu cao');
-        let bmi = weight /(height * height);
-        //console.log(bmi);
-        let result = '';
+      let weight = prompt("nhap can nang (kg) :");
+      let height = prompt("nhap chieu cao (m):");
+      weight = parseFloat(weight);
+      height = parseFloat(height);
+      let bmi = weight / (height * height);
+      //console.log(bmi);
+      let result = "";
+      if (weight !== null && height !== null) {
         if (bmi < 16) {
-            result ='Gay do III';
-        }else if (16 <= bmi < 17) {
-            result ='Gay do II';
-        }else if (17 <= bmi < 18.5) {
-            result ='Gay do I';
+          result = "Gay do III";
+        } else if (bmi < 17) {
+          result = "Gay do II";
+        } else if (bmi < 18.5) {
+          result = "Gay do I";
+        } else if (bmi < 25) {
+          result = "Binh thuong";
+        } else if (bmi < 30) {
+          result = "Thua can";
+        } else if (bmi < 35) {
+          result = "Beo phi do I";
+        } else if (bmi < 40) {
+          result = "Beo phi do II";
+        } else if (bmi > 40) {
+          result = "Beo phi do III";
         }
-        else if (18.5 <= bmi < 25) {
-            result ='Binh thuong';
-        }
-        else if (25 <= bmi < 30) {
-            result ='Thua can';
-        }
-        else if (30 <= bmi < 35) {
-            result ='Beo phi do I';
-        }
-        else if (35 <= bmi <= 40) {
-            result ='Beo phi do II';
-        }
-        else if ( bmi > 40) {
-            result ='Beo phi do II';
-        }
-        let inner = document.getElementById('result');
-        inner.innerHTML = result;
-        
+      }
+      let display = document.getElementById("result");
+      display.innerHTML = result;
     </script>
-    
-</body>
+  </body>
 </html>
