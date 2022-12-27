@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let number  = prompt('Hay nhap so ma ban muon dao nguoc:') ;
+        let arrofchar = number.split('');
+       // console.log(arrofchar);
+
+        let reverseString=   arrofchar.reverse();
+        //console.log(reverseString);
+        let newArr = reverseString.join('');
+        // let newNum = newArr.toString();
+        document.write (`so dao nguoc la :${newArr}`);
+    </script>
+    
+</body>
+</html>
