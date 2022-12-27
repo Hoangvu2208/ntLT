@@ -7,112 +7,16 @@
     <title>Document</title>
   </head>
   <body>
-    <style>
-        .form-container{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        }
-        .form-row{
-            width: 30vw;
-            display: grid;
-            grid-template-columns: 100px auto;
-            margin: 1rem;
-        }
-    </style>
-     <div class="form-container"></div>
-    <form action="">
-     
-        <div class="form-row">
-          <label for="">Nhap nam</label>
-          <input type="number" id="year" />
-        </div>
-        <div class="form-row">
-          <label for="">Nhap thang</label>
-          <input type="number" id="month" min="1" max="12" />
-        </div>
-     
-      <button type="button" onclick="check()">check</button>
-    </form>
-</div>
-    <div id="result"></div>
-
     <script>
-      function check() {
-        let year = document.getElementById("year").value;
-        let month = document.getElementById("month").value;
-
-        //console.log(year);
-        if(year !== '' && month !== ''){
-            let checkYear = "";
-            let checkMonth = "";
-            let leapYear = true;
-
-        if (year % 4 == 0) {
-          if (year % 100 == 0) {
-            if (year % 400 == 0) {
-              checkYear = "nam " + year + "la nam nhuan.";
-            } else {
-              leapYear = false;
-              checkYear = "nam " + year + "la nam khong nhuan.";
-            }
-            leapYear = false;
-          } else {
-            // day la nam nhuan 
-            checkYear = "nam " + year + "la nam nhuan.";
-          }
-        } else {
-          //day la nam khong nhuan
-          leapYear = false;
-          checkYear = "nam " + year + "la nam khong nhuan.";
-        }
-
-        console.log(leapYear);
-            // kiem tra thang
-        switch (month) {
-          case "1":
-          case "3":
-          case "7":
-          case "5":
-          case "8":
-          case "10":
-          case "12":
-            checkMonth = "31 ngay";
-            break;
-          case "2":
-            if (leapYear = true) {
-              checkMonth = "29 ngay";
-            } else {
-              checkMonth = "28 ngay";
-            }
-            break;
-          case "4":
-          case "6":
-          case "9":
-          case "11":
-            checkMonth = "30 ngay";
-            break;
-
-          default:
-            alert("vui long nhap thang tu 1 den 12");
-        }
-        let inner = document.getElementById("result");
-        inner.innerHTML =
-          "Nam " +
-          year +
-          " la " +
-          checkYear +
-          " <br> Thang " +
-          month +
-          " cua nam " +
-          year +
-          " co : " +
-          checkMonth;
-        }else{
-            alert(' Vui long nhap nam va thang muon kiem tra');
-        }
-      }
+      let num = prompt("hay nhap so ban muon dao nguoc");
+      num = parseInt(num);
+      let str = "";
+      // 123
+      do {
+        str += num % 10;
+        num = Math.floor(num / 10);
+      } while (num > 0);
+      alert("gias tri sau khi dao la " + str);
     </script>
   </body>
 </html>
