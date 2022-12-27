@@ -43,7 +43,7 @@
         let year = document.getElementById("year").value;
         let month = document.getElementById("month").value;
 
-        console.log(year);
+        //console.log(year);
         if(year !== '' && month !== ''){
             let checkYear = "";
             let checkMonth = "";
@@ -59,8 +59,7 @@
             }
             leapYear = false;
           } else {
-            // day la nam nhuan
-
+            // day la nam nhuan 
             checkYear = "nam " + year + "la nam nhuan.";
           }
         } else {
@@ -75,6 +74,7 @@
           case "1":
           case "3":
           case "7":
+          case "5":
           case "8":
           case "10":
           case "12":

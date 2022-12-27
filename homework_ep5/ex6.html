@@ -10,19 +10,25 @@
     <button type="button" onclick="play()">Choi</button>
     <script>
         function play (){
-            let number = prompt("Hay nhap vao gioi han ban muon doan:");
+            let number = prompt("Hay nhap vao gioi han ban muon doan:"); 
+            number = parseInt(number) + 1;
+            
+            let true_num = Math.floor(Math.random() * number );
             let num = prompt('Hay nhap so cua ban:  ');
-            let true_num = Math.floor(Math.random() *  (number + 1));
             console.log(true_num);
-            let i = 0;
-            while(i < 3) {
-                if (num === true_num){
-                    alert('ok');
-                }else{
-                    alert('so khong dung vui long nhap lai');
-                     num = prompt('Hay nhap so cua ban:  ');
+            if (num == true_num) {
+                alert('bingo!');
+            }else{
+                let i = 0;{
+                    while (i < 1) {
+                        num = prompt('hay nhap so cua ban');
+                        if (num == true_num) {
+                            alert('bingo');
+                            i =3;
+                        }
+                        i++;
+                    }
                 }
-                i++;               
             }
                 
 
