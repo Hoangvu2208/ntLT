@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">a</label> <br />
+    <input type="text" id="a" /> <br />
+    <label for="">b</label> <br />
+    <input type="text" id="b" /> <br />
+    <button id="solve" onclick="tong()">Solve</button>
+
+    <div id="result"></div>
+
+    <script>
+      function tong() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let sum = 0;
+        if (a > b) {
+          for (let i = b; i <= a; i++) {
+            sum += i;
+          }
+        } else {
+          for (let i = a; i <= b; i++) {
+            sum += i;
+          }
+        }
+
+        let result = document.getElementById("result");
+        result.innerHTML = `tong cac so trong khoang tu ${a}  den ${b}  la : ${sum}`;
+      }
+    </script>
+  </body>
+</html>

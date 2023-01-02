@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="loop1">
+      <button onclick="triangle1()">tam giac 1</button>
+      <button onclick="triangle2()">tam giac 2</button>
+      <button onclick="triangle3()">tam giac 3</button>
+      <button onclick="triangle4()">tam giac 4</button>
+    </div>
+
+    <script>
+      function triangle1() {
+        for (i = 0; i < 5; i++) {
+          for (j = 0; j <= i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+      function triangle2() {
+        for (i = 4; i >= 0; i--) {
+          for (j = 0; j <= i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+
+      function triangle3() {
+        for (i = 0; i < 5; i++) {
+          for (j = 0; j < i; j++) {
+            document.write("&nbsp&nbsp");
+          }
+          for (j = 5; j > i; j--) {
+            document.write("*");
+            // if (j > i + 1) {
+            //   document.write("&nbsp ");
+            // }
+          }
+          document.write("<br>");
+        }
+      }
+      function triangle4() {
+        for (i = 0; i <= 5; i++) {
+          document.write("</br>");
+          for (j = 0; j < 6 - i; j++) {
+            document.write("&nbsp&nbsp");
+          }
+          for (j = 6 - i; j <= 5; j++) {
+            document.write("*");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

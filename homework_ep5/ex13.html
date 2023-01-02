@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="bai1()">bai1</button>
+    <button type="button" onclick="bai2()">bai2</button>
+    <button type="button" onclick="bai3()">bai3</button>
+    <button type="button" onclick="bai4()">bai4</button>
+    <button type="button" onclick="bai5()">bai5</button>
+    <button type="button" onclick="bai6()">bai6</button>
+    <button type="button" onclick="bai7()">bai7</button>
+    
+
+    <script>
+
+        function bai1 (){
+            let i = 0;
+            let result = "";
+            while (i < 100 ) {
+                result += `${i} <br>`;
+                i ++;
+
+            }
+            document.write(result);
+            if (i = 99) {
+                alert('okok');
+            }
+        }
+
+        function bai2 (){
+            let t = parseInt(prompt('hay nhap nhiet do'));
+            //console.log(t);
+            while(t < 20){
+                t = prompt('nhiet do qua thap hay nhap nhiet do');
+
+            };
+            while(t > 100){
+                t = prompt('nhiet do qua cao hay nhap nhiet do');
+
+            };
+           
+        }
+
+        function bai3 () {
+            let number =20; 
+
+        let n1 = 0, n2 = 1, roll;
+
+        for (let i = 1 ; i <= number ; i++ ){
+            roll = n1 + n2;
+            n1 = n2;
+            n2 = roll;
+            document.write(` ${n1}  -> `);
+        }
+        }
+
+        function bai4 () {
+            let number =20; 
+
+        let n1 = 0, n2 = 1, roll;
+
+        for (let i = 1 ; i <= number ; i++ ){
+            roll = n1 + n2;
+            n1 = n2;
+            n2 = roll;
+            if(n1 % 5 == 0){
+                document.write(`so fibonaci dau tien chia het cho 5 la : ${n1}   `);
+                break;
+            }
+        }
+        }
+
+        function bai5 () {
+            let number =20; 
+
+        let n1 = 0, n2 = 1, roll;
+        let sum = 0;
+
+        for (let i = 1 ; i <= number ; i++ ){
+            roll = n1 + n2;
+            n1 = n2;
+            n2 = roll;
+            sum +=n1;
+            
+        }
+        document.write(`tong cua 20 so fibonaci dau tien la: ${sum}`);
+        }
+
+        function bai6(){
+                let count = 0;
+                let sum = 0;
+                for (i = 0; i < 100000 ; i ++) {
+                    
+                    if (i % 7 === 0){
+                        sum += i;
+                        count++;
+                    }
+                    
+                    if (count == 29){
+                        break;
+                    }
+                    
+                    //document.write(`${count},`);
+
+
+                }
+                document.write(sum);
+        }
+
+        function bai7(){
+            for (let i = 1; i < 101; i++){
+                if ( i % 15 == 0){
+                    console.log(i+'fizz buzz');
+                }else if(i % 5 == 0){
+                    console.log(i+'buzz');
+                }else if (i % 3 == 0){
+                    console.log(i + 'fizz');
+                }
+                else{
+                    console.log(i+'undefined');
+                }
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>
