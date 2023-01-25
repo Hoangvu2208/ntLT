@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function bai1 (a,b){
+            
+            if (a > b){
+             return 'a lon hon b';
+            
+            }else{
+                return ' b lon hon a';
+            }
+            
+        }
+        console.log(bai1(20,61));
+
+        function bai2(starsName) {
+            let stars = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+            let star = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+            for (let i = 0; i <= stars.length;i++) {
+                if (starsName === stars[i]) {
+                    stars[i] === star[i];  
+                    return (star[i]);                
+                }                               
+            } return ("khong tim thay")
+        
+        }
+        let starsName1 = prompt("hay nhap ten ngoi sao ");
+        console.log(bai2(starsName1));
+
+        // bai 3
+        function bai3(n) {
+            return n* n;
+        }
+        console.log(bai3(3));
+
+        // bai 4
+
+        
+    </script>
+    
+</body>
+</html>
